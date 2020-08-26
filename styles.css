@@ -1,0 +1,130 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+  display: grid;
+  grid-gap: 0.1vw;
+  height: 100vh;
+  width: 100vw;
+  /*width: 100vw;*/
+  grid-template-columns: 1fr 6fr;
+  grid-template-rows: 1.2fr 1fr 9fr 1fr;
+  grid-template-areas: "header ." "section section " "sidebar content" "footer footer";
+  align-content: center;
+}
+
+.top-icon {
+  grid-area: header;
+  margin: 3px 5px;
+  place-self: center;
+  border: transparent;
+  padding: 2px 10px;
+}
+
+.navigation {
+  grid-area: section;
+  background: #35383a;
+}
+
+.navigation__items {
+  list-style: none;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navigation__item {
+  margin: 0 1rem;
+}
+
+.navigation__item a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  padding: 0.2rem 0;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background: #35383a;
+}
+
+.sidebar-navigation {
+  list-style: none;
+  padding: 1rem 1rem;
+  display: flex;
+  /*align-items: center;*/
+  justify-content: center;
+  flex-direction: column;
+}
+
+.sidebar-navigation__item {
+  margin: 5px;
+}
+
+.sidebar-navigation__item a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  padding: 0.2rem 0;
+}
+
+.content {
+  grid-area: content;
+  background: #e0e0e0;
+  overflow-y: scroll;
+}
+
+.footer {
+  grid-area: footer;
+  background: #35383a;
+}
+
+.footer__links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.footer__link {
+  margin: 0.5rem 1rem;
+}
+
+.footer__link a {
+  color: white;
+  text-decoration: none;
+}
+
+.blog {
+  font-size: 1.2rem;
+  display: flex;
+  grid-column-gap: 0.5vw;
+  flex-direction: row;
+  overflow: hidden;
+  align-content: space-between;
+  margin: 1.5em;
+}
+
+.blog img {
+  margin: 1em;
+  background-position: center;
+  height: 30vh;
+  width: 35vw;
+  object-fit: cover;
+  vertical-align: bottom;
+}
